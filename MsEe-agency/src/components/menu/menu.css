@@ -1,0 +1,735 @@
+.mainborder {
+  border: 1px solid black;
+  height: 120px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding-top: 20px;
+  z-index: 999;
+}
+.logo {
+  height: 70px;
+  padding: 10px;
+  margin-left: 400px;
+  position: absolute;
+  z-index: 999;
+}
+.logoTitle {
+  color: white;
+  font-size: 42px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 500px;
+  position: absolute;
+  top: 15px;  
+}
+.nav {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  position: absolute;
+  right: 400px;
+  top: 42px;
+  display: block;
+}
+.nav-item {
+  color: white;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  z-index: 999;
+}
+.contact-btn {
+  position: relative;
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Rotirajući krug */
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotateCircle 4s linear infinite;
+  z-index: 0;
+}
+
+/* Hover efekat (promena boje dugmeta) */
+.contact-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Animacija rotacije */
+@keyframes rotateCircle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.line1 {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 74px;
+  position: absolute;
+  margin-top: 270px;
+  margin-left: 420px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+.line2 {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 74px;
+  position: absolute;
+  margin-top: 360px;
+  margin-left: 420px;
+}
+.line3 {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 74px;
+  position: absolute;
+  margin-top: 450px;
+  margin-left: 420px;
+}
+.orange {
+  color: #e65c00;
+}
+.bot {
+  position: absolute;
+  height: 650px;
+  right: 340px;
+  top: 150px;
+}
+.cloud {
+  position: absolute;
+  height: 190px;
+  right: 660px;
+  top: 150px;
+}
+.menuButton {
+  display: none;
+}
+@media (max-width: 420px) {
+  .toggle {
+    border: 1px solid rgb(210, 144, 22);
+    height: 100%;
+    position: fixed;
+    background-color: rgb(230, 117, 3);
+    top: 0px;
+    left: 0;
+    width: 100%;
+  }
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 1px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 70px;
+    top: 3px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 51px;
+    z-index: 99;
+    margin-top: 120px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 60px;
+    z-index: 99;
+    margin-top: 180px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 410px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 250px;
+    right: 30px;
+    top: 540px;
+  }
+  .nav {
+    display: none;
+  }
+  .cloud {
+    position: absolute;
+    height: 100px;
+    right: 140px;
+    top: 500px;
+  }
+  .item {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+
+  .router-link-exact-active {
+    color: #ff6600; /* ili koja god boja */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 533px) {
+  .item {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+
+  .router-link-exact-active {
+    color: #ff6600; /* ili koja god boja */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cloud {
+    position: absolute;
+    height: 100px;
+    right: 140px;
+    top: 500px;
+  }
+  .toggle {
+    border: 1px solid rgb(210, 144, 22);
+    height: 100%;
+    position: fixed;
+    background-color: rgb(230, 117, 3);
+    top: 0px;
+    left: 0;
+    width: 100%;
+  }
+  .item {
+    color: rgb(0, 0, 0);
+    list-style: none;
+    font-size: 30px;
+    margin-top: 30px;
+    text-decoration: none !important;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active,
+  .nav-item,
+  .item,
+  .contact-btn {
+    text-decoration: none !important;
+    color: black !important;
+  }
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 1px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 70px;
+    top: 3px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 51px;
+    z-index: 99;
+    margin-top: 120px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 60px;
+    z-index: 99;
+    margin-top: 180px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 410px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 250px;
+    right: 30px;
+    top: 500px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (min-width: 533px) and (max-width: 768px) {
+  .item {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+
+  .router-link-exact-active {
+    color: #ff6600; /* ili koja god boja */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cloud {
+    position: absolute;
+    height: 130px;
+    right: 180px;
+    top: 430px;
+  }
+  .toggle {
+    border: 1px solid rgb(210, 144, 22);
+    height: 100%;
+    position: fixed;
+    background-color: rgb(230, 117, 3);
+    top: 0px;
+    left: 0;
+    width: 100%;
+  }
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 1px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 70px;
+    top: 3px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 60px;
+    z-index: 99;
+    margin-top: 120px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 60px;
+    z-index: 99;
+    margin-top: 190px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 340px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 350px;
+    right: 30px;
+    top: 480px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cloud {
+    position: absolute;
+    height: 130px;
+    right: 180px;
+    top: 350px;
+  }
+  .toggle {
+    border: 1px solid rgb(210, 144, 22);
+    height: 100%;
+    position: fixed;
+    background-color: rgb(230, 117, 3);
+    top: 0px;
+    left: 0;
+    width: 100%;
+  }
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 1px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 70px;
+    top: 3px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 70px;
+    z-index: 99;
+    margin-top: 120px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 73px;
+    z-index: 99;
+    margin-top: 200px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 380px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 400px;
+    right: 10px;
+    top: 400px;
+  }
+  .nav {
+    display: none;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1380px) {
+  .cloud {
+    position: absolute;
+    height: 130px;
+    right: 180px;
+    top: 350px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 30px;
+    top: 15px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 100px;
+    top: 8px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 70px;
+    z-index: 99;
+    margin-top: 190px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 72px;
+    z-index: 99;
+    margin-top: 280px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 380px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 400px;
+    right: 10px;
+    top: 400px;
+  }
+  .nav {
+    right: 30px;
+    top: 25px;
+    font-size: 18px;
+  }
+  .nav-item {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1381px) and (max-width: 1720px) {
+  .cloud {
+    position: absolute;
+    height: 130px;
+    right: 16.5%;
+    top: 170px;
+  }
+  .logo {
+    height: 50px;
+    margin-left: 200px;
+    top: 15px;
+    position: absolute;
+    z-index: 999;
+  }
+  .mainborder {
+    border: 1px solid black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    max-width: 100%;
+    padding-top: 20px;
+    z-index: 999;
+  }
+  .logoTitle {
+    color: white;
+    font-size: 34px;
+    margin-left: 270px;
+    top: 8px;
+    position: fixed;
+    z-index: 999;
+  }
+  .line1 {
+    margin-left: 10px;
+    font-size: 70px;
+    z-index: 99;
+    margin-top: 190px;
+  }
+  .line2 {
+    margin-left: 10px;
+    font-size: 72px;
+    z-index: 99;
+    margin-top: 280px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 10px;
+    font-size: 28px;
+    z-index: 99;
+    margin-top: 380px;
+    text-align: left;
+  }
+  .bot {
+    position: absolute;
+    height: 400px;
+    right: 5%;
+    top: 200px;
+  }
+  .nav {
+    right: 200px;
+    top: 25px;
+    font-size: 18px;
+  }
+  .nav-item {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1720px) and (max-width: 2000px) {
+  .logo {
+    margin-left: 300px;
+    margin-top: 3px;
+  }
+  .logoTitle {
+    margin-left: 390px;
+  }
+  .nav {
+    right: 310px;
+  }
+  .line1 {
+    margin-left: 340px;
+  }
+  .line2 {
+    margin-left: 340px;
+    font-size: 70px;
+    max-width: 950px;
+    text-align: left;
+  }
+  .line3 {
+    margin-left: 340px;
+    font-size: 50px;
+    max-width: 950px;
+    text-align: left;
+    margin-top: 540px;
+  }
+  .bot {
+    left: 67%;
+    height: 500px;
+    margin-top: 80px;
+  }
+  .cloud {
+    left: 60%;
+    height: 180px;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 2001px) and (max-width: 2300px) {
+  .bot {
+    left: 72%;
+    height: 500px;
+    margin-top: 80px;
+  }
+  .logo {
+    margin-left: 300px;
+    margin-top: 3px;
+  }
+  .logoTitle {
+    margin-left: 390px;
+  }
+  .nav {
+    right: 300px;
+  }
+  .line1,
+  .line2,
+  .line3 {
+    margin-left: 320px;
+  }
+  .cloud {
+    left: 65%;
+  }
+}
