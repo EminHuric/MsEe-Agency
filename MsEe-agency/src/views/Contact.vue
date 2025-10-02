@@ -9,6 +9,34 @@
                 <img alt="bot2" src="/public/bot1.jpg" class="bot2">
             </div>
             <img alt="botmini" src="/public/bot1.jpg" class="botmini">
+            <form id="emailForm" class="heading1" action="https://formsubmit.co/ehrx09@gmail.com" method="POST">
+                <h2 class="heading2">Contact form</h2>
+
+                <!-- Hidden inputs za Formsubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://msee-agency.vercel.app">
+
+                <div class="border">
+                    <input type="text" name="name" placeholder="Name" class="name" required>
+                    <input type="email" name="email" placeholder="Email" class="email" required><br>
+                    <input type="text" name="phone" placeholder="Phone number" class="name">
+
+                    <p class="before">Have you worked with us before?</p>
+                    <label style="color: white; margin-right: 10px;">
+                        <input type="radio" name="workedBefore" value="Yes" required> Yes
+                    </label>
+                    <label style="color: white;">
+                        <input type="radio" name="workedBefore" value="No" required> No
+                    </label><br>
+
+                    <textarea name="message" placeholder="Contact message" class="message" required></textarea><br>
+
+                    <button class="send" type="submit">Send Message</button>
+                </div>
+            </form>
+
+
+
         </div>
     </template>
 <script setup>
@@ -16,6 +44,105 @@
 </script>
 
 <style scoped>
+.send {
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 150px;
+    font-size: 18px;
+    background-color: orange;
+    border: none;
+    font-weight: bold;
+
+}
+
+.message {
+    background-color: black;
+    border-color: orange;
+    color: white;
+    margin-top: 50px;
+    height: 63px;
+    margin-left: 100px;
+    width: 580px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 17px;
+}
+
+.value {
+    margin-top: -40px;
+    color: white;
+    margin-left: 50px;
+}
+
+.before {
+    color: white;
+    margin-top: -40px;
+    margin-left: 450px;
+}
+
+.email {
+    background-color: black;
+    border-color: orange;
+    color: white;
+    margin-top: 50px;
+    height: 30px;
+    margin-left: 150px;
+    width: 200px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 17px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
+    color: rgb(255, 228, 215);
+}
+
+.name {
+    background-color: black;
+    border-color: orange;
+    color: white;
+    margin-top: 50px;
+    height: 30px;
+    margin-left: 100px;
+    width: 200px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 17px;
+}
+
+.border {
+    border: 1px solid orange;
+    height: 500px;
+    width: 800px;
+    margin-left: 33%;
+    margin-top: 70px;
+    border-radius: 12px;
+}
+
+.heading2 {
+    margin-top: 400px;
+    color: white;
+    font-size: 65px;
+    text-align: center;
+}
+
+.heading1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .botmini {
     display: none;
 }
@@ -48,7 +175,7 @@
     top: 130px;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 .bot2 {
@@ -201,6 +328,7 @@
         margin-top: -29%;
     }
 }
+
 @media (min-width: 768px) and (max-width: 875px) {
     .title1 {
         margin-left: 20px;
@@ -234,6 +362,7 @@
         margin-top: -250px;
     }
 }
+
 @media (min-width: 876px) and (max-width: 1024px) {
     .title1 {
         margin-left: 20px;
@@ -267,6 +396,7 @@
         margin-top: -280px;
     }
 }
+
 @media (min-width: 1025px) and (max-width: 1380px) {
     .title1 {
         margin-left: 7%;
@@ -300,6 +430,7 @@
         margin-top: -280px;
     }
 }
+
 @media (min-width: 1381px) and (max-width: 1720px) {
     .title1 {
         margin-left: 210px;
@@ -307,21 +438,26 @@
         width: 100%;
         margin-top: 100px;
     }
-     .back {
+
+    .back {
         top: 100px;
     }
+
     .bot2 {
         height: 450px;
         right: 140px;
         position: absolute;
     }
+
     .paragraph {
         margin-left: 210px;
     }
+
     .contact {
         margin-left: 210px;
     }
 }
+
 @media (min-width: 1720px) and (max-width: 2000px) {
     .title1 {
         margin-left: 320px;
@@ -329,15 +465,18 @@
         width: 60%;
         margin-top: 110px;
     }
+
     .bot2 {
         height: 550px;
         right: 230px;
         position: absolute;
     }
+
     .paragraph {
         margin-left: 320px;
         margin-top: -30px;
     }
+
     .contact {
         margin-left: 320px;
     }
