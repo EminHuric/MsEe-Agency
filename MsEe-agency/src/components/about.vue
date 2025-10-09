@@ -88,8 +88,8 @@
 @media (max-width: 420px) {
     .who {
         font-size: 40px;
-        left: 10%;
-        transform: translateX(-10%);
+        left: 9%;
+        transform: translateX(-11%);
         width: 96%;
         padding: 10px;
     }

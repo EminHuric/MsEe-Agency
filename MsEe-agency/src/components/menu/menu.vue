@@ -24,23 +24,48 @@
             </div>
           </div>
 
-            <ul style="margin-top: 200px;">
-              <router-link to="/" @click.native="closeMenu">
-                <li class="item">HOME</li>
-              </router-link>
-              <router-link to="/about" @click.native="closeMenu">
-                <li class="item">ABOUT US</li>
-              </router-link>
-              <router-link to="/services" @click.native="closeMenu">
-                <li class="item">SERVICES</li>
-              </router-link>
-              <router-link to="/careers" @click.native="closeMenu">
-                <li class="item">CAREERS</li>
-              </router-link>
-              <router-link to="/contact" @click.native="closeMenu">
-                <li class="item">CONTACT</li>
-              </router-link>
-            </ul>
+          <ul style="margin-top: 200px;">
+            <router-link to="/" @click.native="closeMenu">
+              <li class="item">HOME</li>
+            </router-link>
+            <router-link to="/about" @click.native="closeMenu">
+              <li class="item">ABOUT US</li>
+            </router-link>
+            <router-link to="/services" @click.native="closeMenu">
+              <li class="item">SERVICES</li>
+            </router-link>
+            <router-link to="/careers" @click.native="closeMenu">
+              <li class="item">CAREERS</li>
+            </router-link>
+            <router-link to="/contact" @click.native="closeMenu">
+              <li class="item">CONTACT</li>
+            </router-link>
+          </ul>
+
+          <div class="extra-content">
+            <div class="sticker">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="sticker2">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="sticker3">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="sticker4">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="sticker5">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="sticker6">
+              <i class="fa-solid fa-signal"></i>
+            </div>
+
+
+            <p class="cc">© 2025 MsEe</p>
+
+          </div>
 
 
         </div>
