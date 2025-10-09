@@ -45,23 +45,12 @@
   top: 450px;
   transform: rotate(20deg);
 }
-.sticker6 {
-  font-size: 50px;
-  position: absolute;
-  left: 15%;
-  top: 120px;
-}
+
 .sticker2 {
   font-size: 100px;
   position: absolute;
   right: 40px;
   bottom: 20px;
-}
-.sticker {
-  font-size: 50px;
-  margin-left: 15%;
-  margin-top: -50px;
-  transform: rotate(-25deg);
 }
 .logoTitle {
   color: white;

@@ -43,9 +43,6 @@
           </ul>
 
           <div class="extra-content">
-            <div class="sticker">
-              <i class="fa-brands fa-facebook"></i>
-            </div>
             <div class="sticker2">
               <i class="fa-solid fa-globe"></i>
             </div>
@@ -57,9 +54,6 @@
             </div>
             <div class="sticker5">
               <i class="fa-solid fa-laptop-code"></i>
-            </div>
-            <div class="sticker6">
-              <i class="fa-solid fa-signal"></i>
             </div>
 
 
