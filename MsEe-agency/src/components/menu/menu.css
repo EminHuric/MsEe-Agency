@@ -9,6 +9,7 @@
   padding-top: 20px;
   z-index: 999;
 }
+
 .logo {
   height: 70px;
   padding: 10px;
@@ -555,7 +556,7 @@
     position: absolute;
     height: 130px;
     right: 180px;
-    top: 350px;
+    top: 370px;
   }
   .logo {
     height: 50px;

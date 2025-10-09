@@ -16,6 +16,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // vraća poziciju ako korisnik ide back/forward
+    }
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' } // smooth scroll na element sa id-jem
+    }
+    return { top: 0 } // po defaultu, skroluje na vrh stranice
+  }
 })
 
 export default router
