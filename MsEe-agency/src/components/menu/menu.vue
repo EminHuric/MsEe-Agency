@@ -57,7 +57,7 @@
             </div>
 
 
-            <p class="cc">© 2025 MsEe</p>
+            <p class="cc">© 2026 MsEe</p>
 
           </div>
 

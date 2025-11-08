@@ -44,7 +44,7 @@
     height: 3px;
     background-color: orange;
     width: 5%;
-    margin-top: 160px;
+    margin-top: 120px;
     border-radius: 2px;
 }
 
@@ -70,7 +70,7 @@
     color: rgb(255, 123, 0);
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 50%;
     font-size: 20px;
     transform: translateX(-50%);
@@ -79,7 +79,7 @@
 .who {
     color: white;
     position: absolute;
-    top: 20px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Poppins', sans-serif;
@@ -247,10 +247,10 @@
     .square {
         margin-left: 4%;
         transform: rotate(115deg);
-        margin-top: -68%;
+        margin-top: -63%;
     }
     .square1 {
-        margin-top: -5%;
+        margin-top: -3%;
         margin-left: 45%;
     }
     .subtitle {
