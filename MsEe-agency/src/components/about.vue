@@ -107,7 +107,7 @@
     }
     .line {
         width: 15%;
-        margin-top: 140px;
+        margin-top: 80px;
     }
     .about {
         top: 1050px;
@@ -160,7 +160,7 @@
     }
     .line {
         width: 10%;
-        margin-top: 130px;
+        margin-top: 90px;
     }
 }
 @media (min-width: 533px) and (max-width: 768px) {
@@ -179,7 +179,7 @@
         top: -60px;
     }
     .text {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: 15%;
         transform: translateX(-10%);
         width: 90%;
@@ -219,7 +219,7 @@
         top: -60px;
     }
     .text {
-        font-size: 18px;
+        font-size: 22px;
         margin-left: 15%;
         transform: translateX(-10%);
         width: 90%;
@@ -248,6 +248,10 @@
         margin-left: 4%;
         transform: rotate(115deg);
         margin-top: -63%;
+    }
+    .text {
+        width: 70%;
+        margin-left: 15%;
     }
     .square1 {
         margin-top: -3%;

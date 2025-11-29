@@ -4,6 +4,9 @@ import About from '../views/About.vue'
 import Services from '../views/Services.vue'
 import Careers from '../views/Careers.vue'
 import Contact from '../views/Contact.vue'
+import Software from '../components/software.vue'
+import Msautomation from '../components/msautomation.vue'
+import Msmedia from '../components/msmedia.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -11,6 +14,10 @@ const routes = [
   { path: '/services', component: Services },
   { path: '/careers', component: Careers },
   { path: '/contact', component: Contact },
+  { path: '/software', component: Software },
+  { path: '/ms-automation', component: Msautomation },
+  { path: '/ms-media', component: Msmedia }
+
 ]
 
 const router = createRouter({

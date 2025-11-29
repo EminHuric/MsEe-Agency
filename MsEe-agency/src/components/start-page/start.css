@@ -1,7 +1,12 @@
 .background1 {
-    width: 100%;
-    min-height: 240vh;
-    position: absolute;
-    left: 0;
-    top: 100px;
+  width: 100%;
+  min-height: 290vh;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: -1; 
+  background-color: black;
+}
+body {
+  background-color: black;
 }

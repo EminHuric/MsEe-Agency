@@ -6,6 +6,7 @@
       <img alt="bot" src="/public/bot.jpg" class="bot">
       <img alt="cloud" src="/public/cloud.png" class="cloud">
       
+      
 
 </template>
 <style src="/src/components/start-page/start.css"></style>
