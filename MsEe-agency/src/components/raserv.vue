@@ -1,5 +1,5 @@
 <template>
-    <img alt="raserv" src="/raserv.jpg" class="logo">
+    
 </template>
 
 <script setup>
