@@ -61,6 +61,7 @@
     margin-left: 20%;
     font-size: 20px;
     margin-top: 250px;
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
@@ -94,7 +95,7 @@
         height: 280px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -850px;
+        margin-top: -900px;
     }
     .tv {
        display: none;
@@ -102,8 +103,8 @@
 
     .headline {
         margin-left: 25px;
-        margin-top: 450px;
-        z-index: 999;
+        margin-top: 350px;
+        
     }
 
     .ms {
@@ -133,7 +134,7 @@
         height: 280px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -850px;
+        margin-top: -750px;
     }
     .tv {
        display: none;
@@ -141,7 +142,7 @@
 
     .headline {
         margin-left: 25px;
-        margin-top: 450px;
+        margin-top: 350px;
         z-index: 999;
     }
 
