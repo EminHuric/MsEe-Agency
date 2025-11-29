@@ -61,7 +61,6 @@
     margin-left: 20%;
     font-size: 20px;
     margin-top: 250px;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
@@ -413,7 +412,7 @@
   .headline {
     margin-left: 19%;
     margin-top: 180px;
-  }
+   }
   .get {
     margin-left: 19%;
   }

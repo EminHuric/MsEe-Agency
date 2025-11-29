@@ -183,6 +183,8 @@
     top: 0px;
     left: 0;
     width: 100%;
+    z-index: 9999;
+    overflow: hidden;
   }
   .menuButton {
     display: block;
