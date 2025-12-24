@@ -3,9 +3,9 @@
         <img src="/msmedia.jpg" alt="ms-media" class="media">
         <div>
             <p class="headline2">Marketing Without Limits</p>
-            <h1 class="ms">MS MEDIA</h1>
+            <h1 class="ms">MS MARKETING</h1>
             <hr class="line">
-            <p class="mediaP">MS Media is a team that propels your brand to the top.
+            <p class="mediaP">MS Marketing is a team that propels your brand to the top.
                 We offer a wide range of marketing services
                 (digital marketing, SEO, social media, campaigns…)
                 crafting strategies that drive growth, boost visibility,

@@ -4,7 +4,11 @@
 <Start />
 <About />
 <Products />
-<Raserv />
+<Clients />
+<Com />
+<Event />
+<Newsletter />
+<Footer />
 
 </div>
 </template>
@@ -13,5 +17,9 @@ import Menu from '../components/menu/menu.vue'
 import Start from '../components/start-page/start.vue'
 import About from '../components/about.vue';
 import Products from '../components/products/products.vue'
-import Raserv from '../components/raserv.vue';
+import Clients from '../components/clients.vue';
+import Com from '../components/com.vue'
+import Event from '../components/event.vue'
+import Newsletter from '../components/newsletter.vue';
+import Footer from '../components/footer.vue';
 </script>

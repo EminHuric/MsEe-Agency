@@ -61,9 +61,10 @@
     margin-left: 20%;
     font-size: 20px;
     margin-top: 250px;
-    position: relative;
+    position: relative  ;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    z-index: 1;
 }
 
 .get {
@@ -95,7 +96,7 @@
         height: 280px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -900px;
+        margin-top: -830px;
     }
     .tv {
        display: none;
@@ -103,13 +104,13 @@
 
     .headline {
         margin-left: 25px;
-        margin-top: 350px;
+        margin-top: 400px;
         
     }
 
     .ms {
         margin-left: 20px;
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .paragraph {
@@ -131,10 +132,10 @@
 @media (min-width: 421px) and (max-width: 533px) {
     .tvP {
         display: block;
-        height: 280px;
+        height: 300px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -750px;
+        margin-top: -770px;
     }
     .tv {
        display: none;
@@ -143,7 +144,7 @@
     .headline {
         margin-left: 25px;
         margin-top: 350px;
-        z-index: 999;
+        z-index: 1;
     }
 
     .ms {
@@ -182,7 +183,7 @@
     .headline {
         margin-left: 25px;
         margin-top: 450px;
-        z-index: 999;
+        z-index: 1;
     }
 
     .ms {
@@ -220,7 +221,7 @@
     .headline {
         margin-left: 25px;
         margin-top: 450px;
-        z-index: 999;
+        z-index: 1;
     }
 
     .ms {

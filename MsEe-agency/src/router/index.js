@@ -7,6 +7,8 @@ import Contact from '../views/Contact.vue'
 import Software from '../components/software.vue'
 import Msautomation from '../components/msautomation.vue'
 import Msmedia from '../components/msmedia.vue'
+import Mstv from '../components/mstv.vue'
+
 
 const routes = [
   { path: '/', component: Home },
@@ -16,7 +18,8 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/software', component: Software },
   { path: '/ms-automation', component: Msautomation },
-  { path: '/ms-media', component: Msmedia }
+  { path: '/ms-media', component: Msmedia },
+  { path: '/ms-tv', component: Mstv }
 
 ]
 
@@ -25,12 +28,12 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition; // vraća poziciju ako korisnik ide back/forward
+      return savedPosition; 
     }
     if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' } // smooth scroll na element sa id-jem
+      return { el: to.hash, behavior: 'smooth' } 
     }
-    return { top: 0 } // po defaultu, skroluje na vrh stranice
+    return { top: 0 } 
   }
 })
 
