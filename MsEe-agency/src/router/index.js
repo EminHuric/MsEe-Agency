@@ -20,7 +20,7 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/software', component: Software },
   { path: '/ms-automation', component: Msautomation },
-  { path: '/ms-media', component: Msmedia },
+  { path: '/ms-marketing', component: Msmedia },
   { path: '/ms-tv', component: Mstv },
   { path: '/create-website', component: Create },
   { path: '/custom-software', component: Custom }

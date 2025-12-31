@@ -12,7 +12,7 @@
                 and deliver measurable results. We work with clients worldwide
                 , build brands that leave an indelible mark, and become your strategic partner for lasting success.</p>
 
-            <router-link to="/ms-media">
+            <router-link to="/ms-marketing">
                 <button class="get">Get started</button>
             </router-link>
 

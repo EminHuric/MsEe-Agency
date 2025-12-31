@@ -39,7 +39,7 @@
         <div class="d4">
             <h3 class="services">Services</h3>
             <router-link to="/software" class="footer-link1">Ms Software</router-link>
-            <router-link to="/ms-media" class="footer-link1">Ms Marketing</router-link>
+            <router-link to="/ms-marketing" class="footer-link1">Ms Marketing</router-link>
             <router-link to="/ms-automation" class="footer-link1"> Ms automation</router-link>
             <router-link to="/ms-tv" class="footer-link1">Ms Tv</router-link>
 
