@@ -78,7 +78,6 @@
                     <input class="offer-input" type="text" name="last_name" placeholder="Last Name" required>
                     <input class="offer-input" type="email" name="email" placeholder="Email Address" required>
                     <input class="offer-input" type="tel" name="phone" placeholder="Phone Number">
-                    <input class="offer-input" type="text" name="company" placeholder="Company Name">
 
                     <button class="offer-btn" type="submit">
                         Request Test
