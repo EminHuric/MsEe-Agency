@@ -114,13 +114,14 @@
 
         </div>
     </section>
+    <Footer />
 </template>
 
+<script setup>
+    import Footer from './footer.vue';
+</script>
 
 <style scoped>
-/* HERO SECTION */
-
-/* SECTION */
 .tv-offer-section {
   padding: 120px 6%;
   background: #0d0d0d;
