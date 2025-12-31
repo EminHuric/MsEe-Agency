@@ -14,13 +14,13 @@
     </section>
 
     <!-- WHO WE ARE -->
-    <section class="who-we-are">
+    <section id="who-we-are" class="who-we-are">
       <h2>Who We Are</h2>
       <p>MsEe is a team of passionate digital experts delivering high-impact solutions in web design, branding, SEO, and online advertising.</p>
       <p>Our mission is to elevate brands with measurable results and exceptional service.</p>
       <div class="who-buttons">
-        <button>Our Team</button>
-        <button>Case Studies</button>
+        <button @click="goToContact">Our Team</button>
+        <button @click="goToContact">Case Studies</button>
       </div>
     </section>
 
@@ -58,22 +58,22 @@
         <div class="diff-item">
           <h3>Client Focused</h3>
           <p>Custom strategies for each client’s unique goals.</p>
-          <button>See Case Studies →</button>
+          <button @click="goToContact">See Case Studies →</button>
         </div>
         <div class="diff-item">
           <h3>Results Driven</h3>
           <p>Measurable growth in traffic, leads, and conversions.</p>
-          <button>Our Results →</button>
+          <button @click="goToContact">Our Results →</button>
         </div>
         <div class="diff-item">
           <h3>Creative Solutions</h3>
           <p>Innovative approaches that stand out in a crowded market.</p>
-          <button>Learn More →</button>
+          <button @click="goToContact">Learn More →</button>
         </div>
         <div class="diff-item">
           <h3>Automation & AI</h3>
           <p>Smart tools to optimize workflows and increase efficiency.</p>
-          <button>Discover Tools →</button>
+          <button @click="goToContact">Discover Tools →</button>
         </div>
       </div>
     </section>
@@ -95,12 +95,24 @@
       <button @click="goToContact">Contact Us</button>
     </section>
 
-  </div>
   <Footer />
+  </div>
 </template>
 
 <script setup>
-    import Footer from '../components/footer.vue';
+import { useRouter } from 'vue-router';
+import Footer from '../components/footer.vue';
+
+const router = useRouter();
+
+const goToContact = () => {
+  router.push('/contact');
+}
+
+const learnMore = () => {
+  const element = document.getElementById('who-we-are');
+  if(element) element.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 <style scoped>
