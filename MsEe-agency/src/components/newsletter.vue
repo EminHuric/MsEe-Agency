@@ -10,7 +10,7 @@
     <form 
       id="emailForm" 
       class="newsletter-form" 
-      action="https://formsubmit.co/ehrx09@gmail.com" 
+      action="https://formsubmit.co/msee.agency@gmail.com" 
       method="POST"
       target="_blank"
     >

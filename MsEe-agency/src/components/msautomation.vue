@@ -1,3 +1,4 @@
 <template>
-    <p style="color: azure; margin-top: 400px;">ss</p>
+    <p style="color: white; margin-top: 400px;">ss</p>
+    
 </template>

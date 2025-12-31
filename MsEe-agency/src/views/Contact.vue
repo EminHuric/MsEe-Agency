@@ -34,7 +34,7 @@
                     and deliver experiences that make a lasting impact worldwide.</p>
             </div>
 
-            <form id="emailForm" class="heading1" action="https://formsubmit.co/ehrx09@gmail.com" method="POST">
+            <form id="emailForm" class="heading1" action="https://formsubmit.co/msee.agency@gmail.com" method="POST">
                 <h2 class="heading2">Contact form</h2>
                 <p class="txt">What are you waiting for? Contact us and let’s go for new victories together!</p>
                 <hr class="line">

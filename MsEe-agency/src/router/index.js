@@ -8,6 +8,8 @@ import Software from '../components/software.vue'
 import Msautomation from '../components/msautomation.vue'
 import Msmedia from '../components/msmedia.vue'
 import Mstv from '../components/mstv.vue'
+import Create from '../components/create.vue'
+import Custom from '../components/custom.vue'
 
 
 const routes = [
@@ -19,7 +21,11 @@ const routes = [
   { path: '/software', component: Software },
   { path: '/ms-automation', component: Msautomation },
   { path: '/ms-media', component: Msmedia },
-  { path: '/ms-tv', component: Mstv }
+  { path: '/ms-tv', component: Mstv },
+  { path: '/create-website', component: Create },
+  { path: '/custom-software', component: Custom }
+
+
 
 ]
 
