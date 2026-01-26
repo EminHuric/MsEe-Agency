@@ -30,11 +30,13 @@
                 <p class="not1">We are a team of multi-skilled professionals,
                     driven by creativity and innovation, developing
                     marketing solutions, digital tools, and software
-                     that empower brands to grow, connect with audiences,
+                    that empower brands to grow, connect with audiences,
                     and deliver experiences that make a lasting impact worldwide.</p>
             </div>
 
             <form id="emailForm" class="heading1" action="https://formsubmit.co/msee.agency@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://msee-agency.vercel.app">
                 <h2 class="heading2">Contact form</h2>
                 <p class="txt">What are you waiting for? Contact us and let’s go for new victories together!</p>
                 <hr class="line">
@@ -75,6 +77,7 @@ import Footer from '../components/footer.vue'
     text-align: center;
     margin-top: -30px;
 }
+
 .not1 {
     color: white;
     margin-left: 43%;
@@ -83,6 +86,7 @@ import Footer from '../components/footer.vue'
     font-size: 20px;
     width: 40%;
 }
+
 .emaill {
     color: rgb(216, 97, 23);
     margin-left: 43%;
@@ -197,11 +201,13 @@ import Footer from '../components/footer.vue'
     margin-top: -40px;
     margin-left: 450px;
 }
+
 .post {
     height: 700px;
     margin-left: 60%;
     margin-top: -700px;
 }
+
 .email {
     background-color: black;
     border-color: orange;
@@ -250,6 +256,7 @@ textarea:focus {
     margin-top: 150px;
     border-radius: 12px;
 }
+
 .line {
     border: none;
     height: 3px;
@@ -258,6 +265,7 @@ textarea:focus {
     margin-top: 40px;
     border-radius: 2px;
 }
+
 .heading2 {
     margin-top: 450px;
     color: white;
@@ -330,59 +338,71 @@ textarea:focus {
     .txt {
         margin: 10px;
     }
+
     .post {
         margin-left: 20px;
         height: 300px;
         margin-top: 0px;
         margin-left: 15%;
     }
+
     .photo {
         margin-left: 10px;
         width: 93%;
         height: 520px;
     }
+
     .window {
         margin-left: 25px;
         width: 85%;
         margin-top: -500px;
     }
+
     .contact1 {
         margin-top: 20%;
         font-size: 40px;
         margin-left: 20px;
     }
+
     .not {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 20px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 20px;
     }
+
     .phonenumber {
         margin-left: 20px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 20px;
         margin-top: -15px;
         width: 90%;
     }
+
     .line {
         margin-top: 20px;
         width: 15%;
     }
+
     .want {
         font-size: 40px;
         padding: 5px;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
@@ -534,67 +554,81 @@ textarea:focus {
         font-size: 40px;
         padding: 5px;
     }
+
     .txt {
         margin: 10px;
     }
+
     .line {
         margin-top: 40px;
         width: 15%;
     }
+
     .photo {
         margin-left: 10px;
         width: 93%;
         height: 520px;
     }
+
     .window {
         margin-left: 25px;
         width: 85%;
         margin-top: -500px;
     }
+
     .contact1 {
         margin-top: 20%;
         font-size: 40px;
         margin-left: 20px;
     }
+
     .not {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 20px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 20px;
     }
+
     .phonenumber {
         margin-left: 20px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 20px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
     }
+
     .not1 {
         margin-left: 20px;
         margin-top: -15px;
         width: 90%;
     }
+
     .border {
         margin-left: 50px;
         width: 75%;
         height: 600px;
         margin-top: 50px;
     }
+
     .post {
         margin-left: 20px;
         height: 300px;
@@ -608,67 +642,81 @@ textarea:focus {
         font-size: 40px;
         padding: 5px;
     }
+
     .txt {
         margin: 10px;
     }
+
     .line {
         margin-top: 40px;
         width: 15%;
     }
+
     .photo {
         margin-left: 10px;
         width: 93%;
         height: 650px;
     }
+
     .window {
         margin-left: 40px;
         width: 85%;
         margin-top: -600px;
     }
+
     .contact1 {
         margin-top: 15%;
         font-size: 40px;
         margin-left: 20px;
     }
+
     .not {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 20px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 20px;
     }
+
     .phonenumber {
         margin-left: 20px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 20px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
     }
+
     .not1 {
         margin-left: 20px;
         margin-top: -15px;
         width: 90%;
     }
+
     .border {
         margin-left: 50px;
         width: 75%;
         height: 600px;
         margin-top: 50px;
     }
+
     .post {
         height: 300px;
         margin-top: 0px;
@@ -680,7 +728,7 @@ textarea:focus {
     .heading2 {
         font-size: 50px;
     }
-    
+
     .before {
         margin: 5px;
         margin-top: 35px;
@@ -760,55 +808,66 @@ textarea:focus {
         width: 85%;
         height: 620px;
     }
+
     .window {
         margin-left: 60px;
         width: 83%;
         margin-top: -600px;
     }
+
     .contact1 {
         margin-top: 15%;
         font-size: 40px;
         margin-left: 55px;
     }
+
     .not {
         margin-left: 50px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 50px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 50px;
     }
+
     .phonenumber {
         margin-left: 50px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 50px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
     }
+
     .not1 {
         margin-left: 50px;
         margin-top: -15px;
         width: 85%;
     }
+
     .border {
         margin-left: 50px;
         width: 75%;
         height: 600px;
         margin-top: 50px;
     }
+
     .post {
         height: 300px;
         margin-top: 0px;
@@ -896,64 +955,77 @@ textarea:focus {
     .send {
         margin-left: 80px;
     }
+
     .p {
         font-size: 22px;
         margin-left: 10px;
     }
+
     .photo {
         margin-left: 70px;
         width: 85%;
         height: 720px;
     }
+
     .window {
         margin-left: 80px;
         width: 83%;
         margin-top: -700px;
     }
+
     .contact1 {
         margin-top: 15%;
         font-size: 40px;
         margin-left: 70px;
     }
+
     .not {
         margin-left: 70px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 70px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 70px;
     }
+
     .phonenumber {
         margin-left: 70px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 70px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
     }
+
     .not1 {
         margin-left: 70px;
         margin-top: -15px;
         width: 85%;
     }
+
     .border {
         margin-left: 70px;
         width: 75%;
         height: 600px;
         margin-top: 50px;
     }
+
     .post {
         height: 350px;
         margin-top: 0px;
@@ -979,6 +1051,7 @@ textarea:focus {
         margin-top: -40px;
         margin-left: 400px;
     }
+
     .yes {
         margin-left: 450px;
     }
@@ -1026,64 +1099,77 @@ textarea:focus {
     .send {
         margin-left: 80px;
     }
+
     .p {
         font-size: 22px;
         margin-left: 10px;
     }
+
     .photo {
         margin-left: 100px;
         width: 80%;
         height: 720px;
     }
+
     .window {
         margin-left: 120px;
         width: 76%;
         margin-top: -700px;
     }
+
     .contact1 {
         margin-top: 15%;
         font-size: 40px;
         margin-left: 70px;
     }
+
     .not {
         margin-left: 70px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 70px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 70px;
     }
+
     .phonenumber {
         margin-left: 70px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 70px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 150px;
     }
+
     .not1 {
         margin-left: 70px;
         margin-top: -15px;
         width: 85%;
     }
+
     .border {
         margin-left: 70px;
         width: 75%;
         height: 600px;
         margin-top: 50px;
     }
+
     .post {
         height: 350px;
         margin-top: 0px;
@@ -1161,78 +1247,97 @@ textarea:focus {
         margin-left: 4%;
         width: 400px;
     }
+
     .window {
         margin-left: 75px;
     }
+
     .contact1 {
         margin-left: 500px;
         margin-top: -550px;
         font-size: 50px;
     }
-        .not {
+
+    .not {
         margin-left: 500px;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 500px;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 500px;
     }
+
     .phonenumber {
         margin-left: 500px;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 500px;
         margin-top: -15px;
         width: 90%;
     }
+
     .heading2 {
         font-size: 50px;
         margin-top: 250px;
     }
+
     .not1 {
         margin-left: 500px;
         margin-top: -15px;
         width: 50%;
     }
+
     .border {
         margin-left: 4%;
         width: 53%;
     }
+
     .name {
         margin-left: 20px;
         width: 38%;
     }
+
     .before {
         margin-left: 400px;
     }
+
     .yes {
         margin-left: 420px;
     }
+
     .message {
         margin-left: 50px;
         width: 80%;
     }
+
     .before {
         margin-left: 350px;
         font-size: 15px;
     }
+
     .email {
         margin-left: 50px;
     }
+
     .yes {
         margin-left: 380px;
     }
+
     .send {
         margin-left: 50px;
     }
+
     .post {
         height: 550px;
     }
@@ -1277,58 +1382,72 @@ textarea:focus {
         margin-left: 17%;
         width: 400px;
     }
+
     .contact1 {
         margin-left: 48%;
     }
+
     .not {
         margin-left: 48.5%;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 48.5%;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 48.5%;
     }
+
     .phonenumber {
         margin-left: 48.5%;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 48.5%;
         margin-top: -15px;
         width: 40%;
     }
+
     .border {
         margin-left: 17% !important;
         width: 40%;
     }
+
     .name {
         margin-left: 50px;
         width: 30%;
     }
+
     .email {
         margin-left: 80px;
         width: 30%;
     }
+
     .before {
         margin-left: 280px;
     }
+
     .yes {
         margin-left: 300px;
     }
+
     .message {
         margin-left: 50px;
         width: 80%;
     }
+
     .send {
         margin-left: 50px;
     }
+
     .post {
         margin-left: 62%;
         height: 600px;
@@ -1345,6 +1464,7 @@ textarea:focus {
     .back {
         top: 100px;
     }
+
     .window {
         margin-left: 18.6%;
     }
@@ -1373,55 +1493,68 @@ textarea:focus {
     .contact1 {
         margin-left: 48%;
     }
+
     .not {
         margin-left: 48.5%;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 48.5%;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 48.5%;
     }
+
     .phonenumber {
         margin-left: 48.5%;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 48.5%;
         margin-top: -15px;
         width: 40%;
     }
+
     .border {
         margin-left: 20% !important;
         width: 40%;
     }
+
     .name {
         margin-left: 50px;
         width: 30%;
     }
+
     .email {
         margin-left: 80px;
         width: 30%;
     }
+
     .before {
         margin-left: 350px;
     }
+
     .yes {
         margin-left: 390px;
     }
+
     .message {
         margin-left: 50px;
         width: 80%;
     }
+
     .send {
         margin-left: 50px;
     }
+
     .post {
         margin-left: 62%;
         height: 600px;
@@ -1456,29 +1589,35 @@ textarea:focus {
         margin-left: 30%;
     }
 }
+
 @media (min-width: 2000px) {
     .contact1 {
         margin-left: 48%;
     }
+
     .not {
         margin-left: 48.5%;
         margin-right: 20px;
         margin-top: -25px;
         font-size: 18px;
     }
+
     .email1 {
         font-size: 40px;
         margin-left: 48.5%;
         margin-top: 50px;
     }
+
     .emaill {
         font-size: 30px;
         margin-left: 48.5%;
     }
+
     .phonenumber {
         margin-left: 48.5%;
         font-size: 30px;
     }
+
     .not1 {
         margin-left: 48.5%;
         margin-top: -15px;

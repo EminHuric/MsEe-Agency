@@ -161,10 +161,30 @@ const scrollToPartners = () => {
   if(el) el.scrollIntoView({ behavior: 'smooth' });
 };
 
-const submitForm = () => {
-  console.log('Application submitted:', form.value);
-  submitted.value = true;
-  form.value = { name:'', age:null, email:'', position:'', reason:'' };
+const submitForm = async () => {
+  const formData = new FormData();
+  formData.append("name", form.value.name);
+  formData.append("age", form.value.age);
+  formData.append("email", form.value.email);
+  formData.append("position", form.value.position);
+  formData.append("reason", form.value.reason);
+  formData.append("_captcha", "false"); // isključuje reCAPTCHA
+
+  try {
+    const response = await fetch("https://formsubmit.co/msee.agency@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+
+    if(response.ok) {
+      submitted.value = true; // prikazuje poruku na stranici
+      form.value = { name:'', age:null, email:'', position:'', reason:'' }; // resetuje formu
+    } else {
+      alert("Došlo je do greške pri slanju. Pokušaj ponovo.");
+    }
+  } catch (err) {
+    alert("Greška pri povezivanju sa serverom.");
+  }
 };
 </script>
 

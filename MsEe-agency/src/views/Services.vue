@@ -16,11 +16,11 @@
     <!-- SERVICES LIST -->
     <section id="services-list" class="services-list">
       <div class="service-item software">
-    <div class="icon">💻</div>
-    <h2>Software</h2>
-    <p>Custom software solutions to automate processes, increase efficiency, and drive growth.</p>
-    <button @click="$router.push('/software')">Learn More →</button>
-  </div>
+        <div class="icon">💻</div>
+        <h2>Software</h2>
+        <p>Custom software solutions to automate processes, increase efficiency, and drive growth.</p>
+        <button @click="$router.push('/software')">Learn More →</button>
+      </div>
 
       <div class="service-item ms-marketing">
         <div class="icon">📣</div>
@@ -82,6 +82,8 @@
       <h2>Get in Touch</h2>
       <p>Fill out the form to discuss your project or services needs with MsEe.</p>
       <form @submit.prevent="submitForm">
+
+        
         <div class="form-group">
           <input type="text" v-model="form.name" placeholder="Your Name" required />
         </div>
@@ -117,16 +119,7 @@ const form = reactive({
   message: ''
 });
 
-const submitForm = () => {
-  console.log('Form submitted:', form);
-  alert('Thank you! We will contact you soon.');
-  // ovde kasnije ubaciš backend handler
-};
-
-const goToService = (service) => {
-  console.log('Redirect to service:', service);
-  // Kasnije ubaci pravi link ili router.push
-};
+const submitted = ref(false);
 
 const contactForm = ref(null);
 const scrollToForm = () => {
@@ -137,65 +130,318 @@ const scrollToSection = (id) => {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 };
+
+const goToService = (service) => {
+  console.log('Redirect to service:', service);
+  // Kasnije ubaci pravi link ili router.push
+};
+
+// FORM SUBMIT SA EMAIL SLANJEM
+const submitForm = async () => {
+  const formData = new FormData();
+  formData.append("name", form.name);
+  formData.append("email", form.email);
+  formData.append("phone", form.phone);
+  formData.append("company", form.company);
+  formData.append("message", form.message);
+  formData.append("_captcha", "false"); // isključuje reCAPTCHA
+
+  try {
+    const response = await fetch("https://formsubmit.co/msee.agency@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      submitted.value = true; // prikazuje poruku
+      // reset forme
+      form.name = '';
+      form.email = '';
+      form.phone = '';
+      form.company = '';
+      form.message = '';
+    } else {
+      alert("Došlo je do greške pri slanju. Pokušaj ponovo.");
+    }
+  } catch (err) {
+    alert("Greška pri povezivanju sa serverom.");
+  }
+};
 </script>
 
 <style scoped>
-.services-page { font-family:'Arial', sans-serif; background:#000; color:#eee; }
+.services-page {
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: #eee;
+}
 
 /* HERO */
-.hero { text-align:center; padding:140px 20px; }
-.hero h1 { font-size:3.5rem; color:#ff5a00; margin-bottom:20px; }
-.hero p { max-width:700px; margin:0 auto 30px; font-size:1.3rem; line-height:1.6; }
-.hero-buttons button {
-  margin:0 10px; padding:16px 40px; background:#ff5a00; color:#000; border:none; border-radius:8px; font-weight:bold; cursor:pointer; transition:.3s;
+.hero {
+  text-align: center;
+  padding: 140px 20px;
 }
-.hero-buttons button:hover { background:#e04a00; color:#fff; transform:scale(1.05); }
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #ff5a00;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.hero-buttons button {
+  margin: 0 10px;
+  padding: 16px 40px;
+  background: #ff5a00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero-buttons button:hover {
+  background: #e04a00;
+  color: #fff;
+  transform: scale(1.05);
+}
 
 /* SERVICES LIST */
-.services-list { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:60px 20px; }
-.service-item { flex:1 1 280px; background:#111; border:2px solid #ff5a00; border-radius:16px; padding:30px; text-align:center; transition: transform .3s, box-shadow .3s; position: relative; overflow:hidden; }
-.service-item:hover { transform:translateY(-10px); box-shadow:0 0 20px #ff5a00; }
-.service-item .icon { font-size:3rem; margin-bottom:15px; color:#ff5a00; }
-.service-item h2 { font-size:1.8rem; margin-bottom:10px; color:#ff5a00; }
-.service-item p { color:#eee; font-size:1rem; line-height:1.5; margin-bottom:20px; }
-.service-item button { padding:12px 30px; background:#ff5a00; color:#000; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition:.3s; }
-.service-item button:hover { background:#e04a00; color:#fff; transform:scale(1.05); }
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.service-item {
+  flex: 1 1 280px;
+  background: #111;
+  border: 2px solid #ff5a00;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #ff5a00;
+}
+
+.service-item .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ff5a00;
+}
+
+.service-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ff5a00;
+}
+
+.service-item p {
+  color: #eee;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.service-item button {
+  padding: 12px 30px;
+  background: #ff5a00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.service-item button:hover {
+  background: #e04a00;
+  color: #fff;
+  transform: scale(1.05);
+}
 
 /* DIFFERENT STYLING PER SERVICE */
-.ms-software:hover { box-shadow: 0 0 25px #ff7f50; }
-.ms-marketing:hover { box-shadow: 0 0 25px #ffb347; }
-.ms-automation:hover { box-shadow: 0 0 25px #ffa500; }
-.ms-tv:hover { box-shadow: 0 0 25px #ff4500; }
-.ms-ads:hover { box-shadow: 0 0 25px #ff8c00; }
-.ms-consulting:hover { box-shadow: 0 0 25px #ff6347; }
+.ms-software:hover {
+  box-shadow: 0 0 25px #ff7f50;
+}
+
+.ms-marketing:hover {
+  box-shadow: 0 0 25px #ffb347;
+}
+
+.ms-automation:hover {
+  box-shadow: 0 0 25px #ffa500;
+}
+
+.ms-tv:hover {
+  box-shadow: 0 0 25px #ff4500;
+}
+
+.ms-ads:hover {
+  box-shadow: 0 0 25px #ff8c00;
+}
+
+.ms-consulting:hover {
+  box-shadow: 0 0 25px #ff6347;
+}
 
 /* FUN FACTS */
-.fun-facts { padding:100px 20px; text-align:center; border-top:2px solid #ff5a00; }
-.facts-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
-.fact-item { background:#111; padding:20px; border-radius:12px; color:#ff5a00; font-size:1.1rem; min-width:180px; border:2px solid #ff5a00; transition: transform .3s, box-shadow .3s; }
-.fact-item:hover { transform:translateY(-8px); box-shadow:0 0 15px #ff5a00; }
+.fun-facts {
+  padding: 100px 20px;
+  text-align: center;
+  border-top: 2px solid #ff5a00;
+}
+
+.facts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.fact-item {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  color: #ff5a00;
+  font-size: 1.1rem;
+  min-width: 180px;
+  border: 2px solid #ff5a00;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.fact-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #ff5a00;
+}
 
 /* CTA */
-.cta { padding:80px 20px; text-align:center; border-top:2px solid #ff5a00; }
-.cta h2 { font-size:2.5rem; color:#ff5a00; margin-bottom:30px; }
-.cta button { padding:16px 50px; font-weight:bold; border-radius:10px; border:none; background:#ff5a00; color:#000; cursor:pointer; transition:.3s; }
-.cta button:hover { background:#e04a00; color:#fff; transform:scale(1.05); }
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #ff5a00;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  color: #ff5a00;
+  margin-bottom: 30px;
+}
+
+.cta button {
+  padding: 16px 50px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: #ff5a00;
+  color: #000;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cta button:hover {
+  background: #e04a00;
+  color: #fff;
+  transform: scale(1.05);
+}
 
 /* CONTACT FORM */
-.contact-form-section { padding:80px 20px; text-align:center; background:#000; border-top:2px solid #ff5a00; }
-.contact-form-section h2 { font-size:2.5rem; color:#ff5a00; margin-bottom:20px; }
-.contact-form-section p { font-size:1.1rem; color:#eee; margin-bottom:40px; }
-form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:20px; }
-input, textarea { padding:14px 20px; border-radius:8px; border:2px solid #ff5a00; background:#111; color:#eee; font-size:1rem; }
-input:focus, textarea:focus { outline:none; border-color:#ffa500; box-shadow:0 0 10px #ff5a00; }
-textarea { min-height:120px; resize:none; }
-form button { padding:16px 40px; background:#ff5a00; color:#000; border:none; border-radius:8px; font-weight:bold; cursor:pointer; transition:.3s; }
-form button:hover { background:#e04a00; color:#fff; transform:scale(1.05); }
+.contact-form-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #000;
+  border-top: 2px solid #ff5a00;
+}
+
+.contact-form-section h2 {
+  font-size: 2.5rem;
+  color: #ff5a00;
+  margin-bottom: 20px;
+}
+
+.contact-form-section p {
+  font-size: 1.1rem;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 2px solid #ff5a00;
+  background: #111;
+  color: #eee;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffa500;
+  box-shadow: 0 0 10px #ff5a00;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+form button {
+  padding: 16px 40px;
+  background: #ff5a00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+form button:hover {
+  background: #e04a00;
+  color: #fff;
+  transform: scale(1.05);
+}
 
 /* Responsive */
-@media(max-width:900px){ 
-  .services-list, .facts-grid { flex-direction:column; gap:25px; }
-  .hero h1 { font-size:2.5rem; }
-  .hero p { font-size:1.1rem; }
+@media(max-width:900px) {
+
+  .services-list,
+  .facts-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
 }
 </style>
