@@ -24,7 +24,7 @@
             </div>
           </div>
 
-          <ul style="margin-top: 200px;">
+          <ul style="margin-top: 150px;">
             <router-link to="/" @click.native="closeMenu">
               <li class="item">HOME</li>
             </router-link>
